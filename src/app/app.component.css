@@ -1,0 +1,76 @@
+span.langTxtDisplay {
+    font-size: 12px !important;
+}
+.main-header{
+    margin-top: 72px;
+    padding: 0 5px 0 14px !important;
+}
+
+.arrowUPIcon {
+    position: fixed;
+    bottom: 50px;
+    right: 29px;
+    background: rgba(0, 0, 0, 0.3);
+    width: 40px;
+    height: 40px;
+}
+.menu{
+    padding: 0px 22px;
+    margin-top: 22px
+}
+.header-divider{
+    border: 2px solid;
+    border-image: -webkit-radial-gradient(ellipse,#ccc,#fff 85%) 100 1;
+}
+.right-heading {
+    line-height: 14px; 
+    color: #008da8;
+     font-size: 13px;
+     position: relative;
+     bottom: 8px;
+}
+.menu-items {
+    position: relative;
+    top: 8px;
+    /* left: 35%;
+    right: 35%; */
+}
+.menu-items-sm{
+    text-align: center;
+    color: #008da8;
+}
+
+.footerDivder {
+    border-top: 1px solid #ccc;
+    margin-top:10px;
+}
+.menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 18px;
+    right: 0px;
+  }
+  .menu-button.rotated {
+    transform: rotate(90deg);
+  }
+  .submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    /* padding-left: 69px; */
+  }
+  .submenu.expanded {
+    transform: scaleY(1);
+  }
+  a {
+    text-decoration: none !important;
+    font-size: 12px;
+}
+ 
+ #menus .submenu .mat-list-item {padding-left: 70px; width: 194px; color: #5c5c5c}
+ #menus .submenu a:hover  { color: #333 !important}
+.logo {margin:3px 0 0 1px}
+.matIcons { width: 28px; height: 28px; line-height: 28px; font-size: 28px !important; font-family: 'icomoon' !important;}
+/* .mat-icon { width: 30px; height: 30px;} */
