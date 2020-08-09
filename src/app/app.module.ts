@@ -6,8 +6,6 @@ import { SharedModule } from "./shared/shared.module";
 import { HttpClient } from "@angular/common/http";
 import { APIService } from "./service";
 import { AppRoutingModule } from "./app.routing.module";
-
-import { SignModule } from "./modules/sign/sign.module";
 import { MaterialModule } from "./shared/material.module";
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +14,6 @@ import { MaterialModule } from "./shared/material.module";
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule.forRoot(),
-    SignModule,
     MaterialModule,
   ],
   providers: [APIService],

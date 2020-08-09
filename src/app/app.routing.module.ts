@@ -2,8 +2,7 @@ import { NgModule } from "@angular/core";
 import { Route, RouterModule } from "@angular/router";
 import { AuthGaurdService } from "./shared/service/auth.gaurd.service";
 import { PageNotFoundComponent } from "./login/pageNotFound";
-import { SignModule } from "./modules/sign/sign.module";
-import { SignInComponent } from "./modules/sign/sign-in/sign-in.component";
+
 const routes: Route[] = [
   {
     path: "",
@@ -20,20 +19,18 @@ const routes: Route[] = [
     component: PageNotFoundComponent,
   },
   {
-    path: "**",
+    path: "*",
     redirectTo: "/pageNotFound",
   },
   {
-    path: "sign",
+    path: "signin",
     loadChildren: () =>
       import("./modules/sign/sign.module").then((m) => m.SignModule),
-  },
-  { path: "sign_in", component: SignInComponent },
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true }), SignModule],
-  exports: [RouterModule, SignModule],
-  declarations: [SignInComponent],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}
