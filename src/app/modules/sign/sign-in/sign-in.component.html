@@ -1,0 +1,151 @@
+<div align="center">
+  <div class="center">
+    <mat-card id="card" style="text-align: center;">
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div fxFlex="100">
+          <img src="../../../assets/img/group-3.svg" />
+        </div>
+        <div align="center">
+          <mat-tab-group>
+            <mat-tab label="LOGIN">
+              <div fxLayout="row wrap" fxLayoutAlign="center center">
+                <div fxLayout="row wrap" fxLayoutAlign="center center">
+                  <div fxFlex="100" style="margin-top: 20px;">
+                    <form>
+                      <div fxLayout="row wrap" fxLayoutAlign="center center">
+                        <div fxFlex="100">
+                          <div>
+                            <mat-form-field appearance="outline">
+                              <mat-label>Email</mat-label>
+
+                              <input matInput placeholder="Email" />
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                              <mat-label>Password</mat-label>
+
+                              <input
+                                matInput
+                                placeholder="Password"
+                                name="auth_password"
+                              />
+                              <mat-icon
+                                matSuffix
+                                style="cursor: pointer;"
+                              ></mat-icon>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+                      <div fxLayout="row wrap" fxLayoutAlign="center center">
+                        <div fxFlex="50" fxFlex.sm="100" fxFlex.xs="100">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            name="rememberme"
+                            style="vertical-align: middle;"
+                          /><span> Remember me</span>
+                        </div>
+                        <div fxFlex="50" fxFlex.sm="100" fxFlex.xs="100">
+                          <div class="link">
+                            <button mat-button style="color: #4285f4;">
+                              Forgot Password?
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <br />
+                    </form>
+                  </div>
+                  <div style="width: 100%;">
+                    <div fxFlex="100">
+                      <button
+                        mat-raised-button
+                        style="background: #4285f4; width: 80%; color: #ffffff;"
+                      >
+                        Login
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bottom" align="center">
+                  <div
+                    style="
+                      font-size: 14px;
+                      margin-top: 20px;
+                      margin-bottom: 60px;
+                    "
+                  >
+                    By continuing, you agree to the
+                    <span style="color: #4285f4;"
+                      >Terms of Service Privacy Policy</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="SIGNUP"
+              ><div fxLayout="row wrap" fxLayoutAlign="center center">
+                <div fxFlex="100" style="margin-top: 20px;">
+                  <form #myForm="ngForm" novalidate autocomplete="off">
+                    <div fxLayout="row wrap" fxLayoutAlign="center center">
+                      <div fxFlex="70">
+                        <div>
+                          <mat-form-field appearance="outline">
+                            <mat-label>Name</mat-label>
+
+                            <input matInput placeholder="Mobile" />
+                          </mat-form-field>
+                          <mat-form-field appearance="outline">
+                            <mat-label>Mobile</mat-label>
+
+                            <input matInput placeholder="Mobile" />
+                          </mat-form-field>
+                          <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Email" />
+                          </mat-form-field>
+                          <mat-form-field appearance="outline">
+                            <mat-label>Enter your password</mat-label>
+                            <input matInput placeholder="Enter your password" />
+                          </mat-form-field>
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+                  </form>
+
+                  <div style="width: 70%;">
+                    <div fxFlex="100">
+                      <button
+                        mat-raised-button
+                        style="background: #4285f4; width: 80%; color: #ffffff;"
+                      >
+                        Signup
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bottom" align="center">
+                  <div
+                    style="
+                      font-size: 14px;
+                      margin-top: 20px;
+                      margin-bottom: 60px;
+                    "
+                  >
+                    By continuing, you agree to the
+                    <span style="color: #4285f4;"
+                      >Terms of Service Privacy Policy</span
+                    >
+                  </div>
+                </div>
+              </div></mat-tab
+            >
+          </mat-tab-group>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

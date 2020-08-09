@@ -1,0 +1,19 @@
+img {
+  margin-top: 50px;
+  width: 100px;
+}
+mat-card {
+  width: 60%;
+}
+mat-form-field {
+  width: 80%;
+}
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+mat-tab-group {
+  margin-top: 40px;
+}
