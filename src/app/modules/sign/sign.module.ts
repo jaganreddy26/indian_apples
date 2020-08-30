@@ -9,7 +9,7 @@ import { OtpComponent } from "./otp/otp.component";
 import { PasswordComponent } from "./password/password.component";
 
 const routes: Route[] = [
-  { path: "sign_in", component: SignInComponent },
+  { path: "", component: SignInComponent },
   { path: "forgot", component: ForgotComponent },
   { path: "otp", component: OtpComponent },
   { path: "password", component: PasswordComponent },

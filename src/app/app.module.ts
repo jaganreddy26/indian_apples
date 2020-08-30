@@ -9,6 +9,7 @@ import { AppRoutingModule } from "./app.routing.module";
 import { MaterialModule } from "./shared/material.module";
 import { ProfileModule } from './modules/profile/profile.module';
 import { HomeModule } from './modules/home/home.module';
+import { MenuModule } from './modules/menu/menu.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -19,6 +20,7 @@ import { HomeModule } from './modules/home/home.module';
     MaterialModule,
     ProfileModule,
     HomeModule,
+    MenuModule,
   ],
   providers: [APIService],
   bootstrap: [AppComponent],

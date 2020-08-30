@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from "./login/pageNotFound";
 
 const routes: Route[] = [
   {
-    path: "",
+    path: "login",
     loadChildren: () =>
       import("./login/login.module").then((m) => m.LoginModule),
   },
@@ -23,7 +23,7 @@ const routes: Route[] = [
     redirectTo: "/pageNotFound",
   },
   {
-    path: "sign",
+    path: "",
     loadChildren: () =>
       import("./modules/sign/sign.module").then((m) => m.SignModule),
   },
@@ -36,6 +36,11 @@ const routes: Route[] = [
     path: "home",
     loadChildren: () =>
       import("./modules/home/home.module").then((m) => m.HomeModule),
+  },
+  {
+    path: "menu",
+    loadChildren: () =>
+      import("./modules/menu/menu.module").then((m) => m.MenuModule),
   },
 ];
 
