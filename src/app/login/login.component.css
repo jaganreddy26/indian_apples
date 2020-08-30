@@ -31,23 +31,30 @@
 }
 
 
-.loginBlock{
+/* .loginBlock{
   position:relative;
   width:100vw;
   height: 90vh;
   margin: auto;
-}
+} */
 
 .loginBlockInner{
-  position:absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-  margin: auto;
-  /* background: tomato; */
-  width: 33vw; height: 37vh;
+  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  /* width:50vw; */
+
 }
 
 /* just aesthetics */
 body{
   height: 100vh;
   display:flex;
+}
+.mar-top-10{
+margin-top: 20px;
+/* width: 100%; */
+}.login-btn{
+  width: 100%;
 }

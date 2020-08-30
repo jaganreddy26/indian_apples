@@ -1,7 +1,34 @@
 <div class="loginBlock">
   <div class="loginBlockInner">
-        <mat-card class="main-card">
-           Login
-        </mat-card>
+        <!-- <mat-card> -->
+          <form class="formwidth" (ngSubmit)="onSubmit()"  [formGroup]="myForm">
+            <div fxLayout="column" style="width:100% !important" fxLayoutAlign="space-between center">
+              <div>
+                <img src="assets/img/game-stores.svg">
+              </div> 
+              <div class="mar-top-10">
+                <mat-form-field appearance="outline">
+                  <mat-label>User Name</mat-label>
+                  <input matInput placeholder="User Name"  [(ngModel)]="loginObj.userName" formControlName="userName" required name="userName" id="userName" >
+                  <mat-error *ngIf="userName.invalid">{{getErrorMessage('userName')}}</mat-error>
+                </mat-form-field>
+              </div>
+            <div class="mar-top-10">
+              <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" [(ngModel)]="loginObj.password" required id="password" name="password" >
+             
+                <mat-error *ngIf="password.invalid">{{getErrorMessage('password')}}</mat-error>
+               
+                <mat-icon matSuffix (click)="hide = !hide" >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              
+              </mat-form-field>
+            </div>
+            <div class="mar-top-10" style="width: 100%;"> 
+              <button  type="submit" class="login-btn" mat-raised-button color="primary" [disabled]="myForm.invalid">Login</button>
+            </div>    
+            </div>
+          </form>
+        <!-- </mat-card> -->
     </div>
 </div>
