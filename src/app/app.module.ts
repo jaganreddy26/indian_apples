@@ -7,6 +7,8 @@ import { HttpClient } from "@angular/common/http";
 import { APIService } from "./service";
 import { AppRoutingModule } from "./app.routing.module";
 import { MaterialModule } from "./shared/material.module";
+import { ProfileModule } from './modules/profile/profile.module';
+import { HomeModule } from './modules/home/home.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -15,6 +17,8 @@ import { MaterialModule } from "./shared/material.module";
     AppRoutingModule,
     SharedModule.forRoot(),
     MaterialModule,
+    ProfileModule,
+    HomeModule,
   ],
   providers: [APIService],
   bootstrap: [AppComponent],

@@ -12,11 +12,10 @@ mat-form-field {
   align-items: center;
 }
 mat-tab-group {
-  margin-top: 40px;
+  margin-top: 10px;
 }
-.btn {
+button {
   width: 100%;
-  background: #4285f4;
 }
 .error {
   color: red;

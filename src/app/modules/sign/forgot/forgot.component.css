@@ -2,6 +2,7 @@ img {
   margin-top: 50px;
   width: 100px;
 }
+
 mat-form-field {
   width: 100%;
 }
@@ -12,11 +13,7 @@ mat-form-field {
   align-items: center;
 }
 mat-tab-group {
-  margin-top: 40px;
-}
-.btn {
-  width: 100%;
-  background: #4285f4;
+  margin-top: 10px;
 }
 .error {
   color: red;

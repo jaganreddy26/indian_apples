@@ -1,0 +1,57 @@
+<div align="center">
+  <div class="center length">
+    <mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div fxFlex="100">
+          <img src="../../../assets/img/group-3.svg" />
+        </div>
+        <div fxFlex="100" style="margin-top: 20px;">
+          <form #myForm="ngForm" novalidate autocomplete="off">
+            <mat-tab-group>
+              <mat-tab label="ENTER OTP">
+                <div fxLayout="row wrap" fxLayoutAlign="center center">
+                  <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                    <mat-form-field appearance="outline">
+                      <mat-label>ENTER OTP</mat-label>
+
+                      <input
+                        matInput
+                        placeholder="ENTER OTP"
+                        name="otp"
+                        [(ngModel)]="otp.otp"
+                        #otpOtp="ngModel"
+                        required
+                      />
+                    </mat-form-field>
+                    <p class="error" *ngIf="!otpOtp.valid && otpOtp.touched">
+                      OTP is Required
+                    </p>
+                  </div>
+                  <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                    <button mat-raised-button>
+                      Continue
+                    </button>
+                  </div>
+                </div>
+              </mat-tab></mat-tab-group
+            >
+          </form>
+
+          <div class="bottom" align="center">
+            <div
+              style="
+                font-size: 14px;
+                margin-top: 15px;
+                margin-bottom: 60px;
+                color: #aeb3c1;
+              "
+            >
+              Didn’t receive anything?
+              <span style="color: #4285f4;">Resend One-Time Password</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

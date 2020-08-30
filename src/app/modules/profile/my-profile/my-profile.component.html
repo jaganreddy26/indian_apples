@@ -1,0 +1,130 @@
+<div align="center">
+  <div class="length">
+    <mat-card>
+      <div class="background">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+          <div fxFlex="33.333" fxFlex.sm="50" fxFlex.xs="50">
+            <h3>« Back to Menu</h3>
+          </div>
+          <div fxFlex="33.333" fxFlex.sm="50" fxFlex.xs="50">
+            <h3>Profile information</h3>
+          </div>
+          <div fxFlex="33.333"></div>
+        </div>
+      </div>
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row wrap" fxLayoutAlign="center center">
+          <div fxFlex="22" fxHide.sm fxHide.xs></div>
+          <div fxFlex="20" fxFlex.sm="50" fxFlex.xs="50">
+            <div class="group-gap">
+              <!-- Upload image -->
+              <div class="avatar-upload">
+                <div class="avatar-edit">
+                  <input
+                    type="file"
+                    id="imageUpload"
+                    accept=".png, .jpg, .jpeg"
+                    #fileInput
+                    (change)="uploadFile($event)"
+                  />
+                </div>
+                <div class="avatar-preview">
+                  <div
+                    id="imagePreview"
+                    [style.backgroundImage]="'url(' + imageUrl + ')'"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div fxFlex="15" fxFlex.sm="50" fxFlex.xs="50">
+            <button
+              type="submit"
+              class="btn btn-danger btn-lg btn-block"
+              (click)="fileInput.click()"
+            >
+              Update Photo »
+            </button>
+          </div>
+          <div fxFlex="38" fxHide.sm fxHide.xs></div>
+        </div>
+      </form>
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div fxFlex="100" style="margin-top: 20px;">
+          <form #myForm="ngForm" novalidate autocomplete="off">
+            <div fxLayout="row wrap" fxLayoutAlign="center center">
+              <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                <mat-form-field appearance="outline">
+                  <mat-label>Name</mat-label>
+
+                  <input
+                    matInput
+                    placeholder="Mobile"
+                    name="name"
+                    [(ngModel)]="profile.name"
+                    #profileName="ngModel"
+                    required
+                  />
+                </mat-form-field>
+                <p
+                  class="error"
+                  *ngIf="!profileName.valid && profileName.touched"
+                >
+                  Name is Required
+                </p>
+              </div>
+              <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                <mat-form-field appearance="outline">
+                  <mat-label>Mobile</mat-label>
+
+                  <input
+                    matInput
+                    placeholder="Mobile"
+                    name="mobile"
+                    [(ngModel)]="profile.mobile"
+                    #profileMobile="ngModel"
+                    required
+                  />
+                </mat-form-field>
+                <p
+                  class="error"
+                  *ngIf="!profileMobile.valid && profileMobile.touched"
+                >
+                  Mobile Number is Required
+                </p>
+              </div>
+
+              <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input
+                    matInput
+                    placeholder="Password"
+                    name="password"
+                    [(ngModel)]="profile.password"
+                    #profilePassword="ngModel"
+                    required
+                  />
+                </mat-form-field>
+                <p
+                  class="error"
+                  *ngIf="!profilePassword.valid && profilePassword.touched"
+                >
+                  Password is Required
+                </p>
+              </div>
+              <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                <button mat-raised-button class="bton">
+                  Save
+                </button>
+              </div>
+            </div>
+            <br />
+          </form>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

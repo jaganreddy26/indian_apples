@@ -1,5 +1,5 @@
 <div align="center">
-  <div class="center">
+  <div class="center length">
     <mat-card id="card" style="text-align: center;">
       <div fxLayout="row wrap" fxLayoutAlign="center center">
         <div fxFlex="100">
@@ -9,69 +9,85 @@
           <mat-tab-group>
             <mat-tab label="LOGIN">
               <div fxLayout="row wrap" fxLayoutAlign="center center">
-                <div fxLayout="row wrap" fxLayoutAlign="center center">
-                  <div fxFlex="100" style="margin-top: 20px;">
-                    <form>
-                      <div fxLayout="row wrap" fxLayoutAlign="center center">
-                        <div fxFlex="100">
-                          <div>
-                            <mat-form-field appearance="outline">
-                              <mat-label>Email</mat-label>
+                <div fxFlex="100" style="margin-top: 20px;">
+                  <form #signinForm="ngForm" (ngSubmit)="onSubmit(signinForm)">
+                    <div fxLayout="row wrap" fxLayoutAlign="center center">
+                      <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Mobile Number</mat-label>
 
-                              <input matInput placeholder="Email" />
-                            </mat-form-field>
-                            <mat-form-field appearance="outline">
-                              <mat-label>Password</mat-label>
-
-                              <input
-                                matInput
-                                placeholder="Password"
-                                name="auth_password"
-                              />
-                              <mat-icon
-                                matSuffix
-                                style="cursor: pointer;"
-                              ></mat-icon>
-                            </mat-form-field>
-                          </div>
-                        </div>
-                      </div>
-                      <div fxLayout="row wrap" fxLayoutAlign="center center">
-                        <div fxFlex="50" fxFlex.sm="100" fxFlex.xs="100">
                           <input
-                            type="checkbox"
-                            class="form-check-input"
-                            name="rememberme"
-                            style="vertical-align: middle;"
-                          /><span> Remember me</span>
-                        </div>
-                        <div fxFlex="50" fxFlex.sm="100" fxFlex.xs="100">
-                          <div class="link">
-                            <button mat-button style="color: #4285f4;">
-                              Forgot Password?
-                            </button>
-                          </div>
+                            matInput
+                            placeholder="Enter your Mobile Number"
+                            name="mobile"
+                            [(ngModel)]="signin.mobile"
+                            #signinMobile="ngModel"
+                            required
+                          />
+                        </mat-form-field>
+                        <p
+                          class="error"
+                          *ngIf="!signinMobile.valid && signinMobile.touched"
+                        >
+                          Mobile Number is Required
+                        </p>
+                      </div>
+                      <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Password</mat-label>
+
+                          <input
+                            matInput
+                            placeholder="Password"
+                            name="password"
+                            [(ngModel)]="signin.password"
+                            #signinPassword="ngModel"
+                            required
+                          />
+                        </mat-form-field>
+                        <p
+                          class="error"
+                          *ngIf="
+                            !signinPassword.valid && signinPassword.touched
+                          "
+                        >
+                          Password is Required
+                        </p>
+                      </div>
+                    </div>
+                    <div fxLayout="row wrap" fxLayoutAlign="start center">
+                      <div fxFlex="11" fxFlex.sm="11" fxHide.xs></div>
+                      <div fxFlex="39" fxFlex.sm="39" fxFlex.xs="40">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          name="rememberme"
+                          style="vertical-align: middle;"
+                        /><span> Remember me</span>
+                      </div>
+                      <div fxFlex.xs="20"></div>
+                      <div fxFlex="39" fxFlex.sm="39" fxFlex.xs="40">
+                        <div class="link">
+                          <button mat-button style="color: #4285f4;">
+                            Forgot Password?
+                          </button>
                         </div>
                       </div>
-                      <br />
-                    </form>
-                  </div>
-                  <div style="width: 100%;">
-                    <div fxFlex="100">
-                      <button
-                        mat-raised-button
-                        style="background: #4285f4; width: 80%; color: #ffffff;"
-                      >
-                        Login
-                      </button>
+                      <div fxFlex="11" fxFlex.sm="11" fxHide.xs></div>
                     </div>
-                  </div>
+                    <br />
+                  </form>
+                </div>
+                <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                  <button mat-raised-button class="btn">
+                    Login
+                  </button>
                 </div>
 
-                <div class="bottom" align="center">
+                <div fxFlex="51" class="bottom" align="center">
                   <div
                     style="
-                      font-size: 14px;
+                      font-size: 10px;
                       margin-top: 20px;
                       margin-bottom: 60px;
                     "
@@ -89,45 +105,98 @@
                 <div fxFlex="100" style="margin-top: 20px;">
                   <form #myForm="ngForm" novalidate autocomplete="off">
                     <div fxLayout="row wrap" fxLayoutAlign="center center">
-                      <div fxFlex="70">
-                        <div>
-                          <mat-form-field appearance="outline">
-                            <mat-label>Name</mat-label>
+                      <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Name</mat-label>
 
-                            <input matInput placeholder="Mobile" />
-                          </mat-form-field>
-                          <mat-form-field appearance="outline">
-                            <mat-label>Mobile</mat-label>
+                          <input
+                            matInput
+                            placeholder="Name"
+                            name="name"
+                            [(ngModel)]="signin.name"
+                            #signinName="ngModel"
+                            required
+                          />
+                        </mat-form-field>
+                        <p
+                          class="error"
+                          *ngIf="!signinName.valid && signinName.touched"
+                        >
+                          Mobile Number Is Required
+                        </p>
+                      </div>
+                      <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Mobile</mat-label>
 
-                            <input matInput placeholder="Mobile" />
-                          </mat-form-field>
-                          <mat-form-field appearance="outline">
-                            <mat-label>Email</mat-label>
-                            <input matInput placeholder="Email" />
-                          </mat-form-field>
-                          <mat-form-field appearance="outline">
-                            <mat-label>Enter your password</mat-label>
-                            <input matInput placeholder="Enter your password" />
-                          </mat-form-field>
-                        </div>
+                          <input
+                            matInput
+                            placeholder="Mobile"
+                            name="mobiles"
+                            [(ngModel)]="signin.mobiles"
+                            #signinMobiles="ngModel"
+                            required
+                          />
+                        </mat-form-field>
+                        <p
+                          class="error"
+                          *ngIf="!signinMobiles.valid && signinMobiles.touched"
+                        >
+                          Mobile Number Is Required
+                        </p>
+                      </div>
+                      <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Email</mat-label>
+                          <input
+                            matInput
+                            placeholder="Email"
+                            name="email"
+                            [(ngModel)]="signin.email"
+                            #signinEmail="ngModel"
+                            required
+                          />
+                        </mat-form-field>
+                        <p
+                          class="error"
+                          *ngIf="!signinEmail.valid && signinEmail.touched"
+                        >
+                          Email Is Required
+                        </p>
+                      </div>
+                      <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Enter your password</mat-label>
+                          <input
+                            matInput
+                            placeholder="Enter your password"
+                            name="enterPassword"
+                            [(ngModel)]="signin.enterPassword"
+                            #signinEnterPassword="ngModel"
+                            required
+                          />
+                        </mat-form-field>
+                        <p
+                          class="error"
+                          *ngIf="
+                            !signinEnterPassword.valid &&
+                            signinEnterPassword.touched
+                          "
+                        >
+                          Password Is Required
+                        </p>
+                      </div>
+                      <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                        <button mat-raised-button class="btn">
+                          Signup
+                        </button>
                       </div>
                     </div>
                     <br />
                   </form>
-
-                  <div style="width: 70%;">
-                    <div fxFlex="100">
-                      <button
-                        mat-raised-button
-                        style="background: #4285f4; width: 80%; color: #ffffff;"
-                      >
-                        Signup
-                      </button>
-                    </div>
-                  </div>
                 </div>
 
-                <div class="bottom" align="center">
+                <!-- <div class="bottom" align="center">
                   <div
                     style="
                       font-size: 14px;
@@ -140,7 +209,7 @@
                       >Terms of Service Privacy Policy</span
                     >
                   </div>
-                </div>
+                </div> -->
               </div></mat-tab
             >
           </mat-tab-group>

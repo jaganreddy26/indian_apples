@@ -23,14 +23,24 @@ const routes: Route[] = [
     redirectTo: "/pageNotFound",
   },
   {
-    path: "signin",
+    path: "sign",
     loadChildren: () =>
       import("./modules/sign/sign.module").then((m) => m.SignModule),
-  }
+  },
+  {
+    path: "profile",
+    loadChildren: () =>
+      import("./modules/profile/profile.module").then((m) => m.ProfileModule),
+  },
+  {
+    path: "home",
+    loadChildren: () =>
+      import("./modules/home/home.module").then((m) => m.HomeModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

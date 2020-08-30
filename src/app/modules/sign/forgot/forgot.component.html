@@ -1,0 +1,54 @@
+<div align="center">
+  <div class="center length">
+    <mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div fxFlex="100">
+          <img src="../../../assets/img/group-3.svg" />
+        </div>
+        <div fxFlex="100" style="margin-top: 20px;">
+          <form #myForm="ngForm" novalidate autocomplete="off">
+            <mat-tab-group>
+              <mat-tab label="Forgot Password">
+                <div fxLayout="row wrap" fxLayoutAlign="center center">
+                  <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Enter Registered Mobile Number</mat-label>
+
+                      <input
+                        matInput
+                        placeholder="Enter Registered Mobile Number"
+                        name="mobile"
+                        [(ngModel)]="forgot.mobile"
+                        #forgotMobile="ngModel"
+                        required
+                      />
+                    </mat-form-field>
+                    <p
+                      class="error"
+                      *ngIf="!forgotMobile.valid && forgotMobile.touched"
+                    >
+                      Mobile Number is Required
+                    </p>
+                  </div>
+                  <div fxFlex="51" fxFlex.sm="60" fxFlex.xs="90">
+                    <button
+                      mat-raised-button
+                      style="
+                        background: #4285f4;
+                        width: 100%;
+                        color: #ffffff;
+                        margin-bottom: 30px;
+                      "
+                    >
+                      Request OTP
+                    </button>
+                  </div>
+                </div>
+              </mat-tab></mat-tab-group
+            >
+          </form>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
