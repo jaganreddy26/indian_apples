@@ -10,6 +10,7 @@ import { MaterialModule } from "./shared/material.module";
 import { ProfileModule } from './modules/profile/profile.module';
 import { HomeModule } from './modules/home/home.module';
 import { MenuModule } from './modules/menu/menu.module';
+import { LiveModule } from './modules/live/live.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -21,6 +22,7 @@ import { MenuModule } from './modules/menu/menu.module';
     ProfileModule,
     HomeModule,
     MenuModule,
+    LiveModule,
   ],
   providers: [APIService],
   bootstrap: [AppComponent],

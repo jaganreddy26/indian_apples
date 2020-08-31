@@ -1,0 +1,50 @@
+h4 {
+  font-size: 11px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #002e6d;
+}
+p {
+  font-size: 10px;
+  font-style: normal;
+  color: #42444d;
+}
+.color {
+  background: #f2f2f2;
+  padding: 13px;
+  margin-top: 15px;
+}
+.color h2 {
+  font-size: 18px;
+  color: #002e6d;
+}
+.btn1,
+.btn2 {
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  width: 100%;
+  margin-top: 15px;
+  outline: none;
+  border: none;
+  padding: 12px;
+  border-radius: 2px;
+}
+.btn1 {
+  background: #4285f4;
+}
+.btn2 {
+  background: #ffa000;
+}
+mat-card {
+  margin-top: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}

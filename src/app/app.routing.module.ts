@@ -42,6 +42,11 @@ const routes: Route[] = [
     loadChildren: () =>
       import("./modules/menu/menu.module").then((m) => m.MenuModule),
   },
+  {
+    path: "live",
+    loadChildren: () =>
+      import("./modules/live/live.module").then((m) => m.LiveModule),
+  },
 ];
 
 @NgModule({
